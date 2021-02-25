@@ -19,7 +19,6 @@ document.querySelector("ul").appendChild(li)
 }
 */
 
-//MAKE THE BUTTON ADD THE VALUE OF THE INPUT FIELD TO THE TODO LIST
 
 let input = document.querySelector("input");
 /*iteration one
@@ -29,16 +28,25 @@ but this worked:
 li.appendChild(input.getAttribute("value")));
 
 */
-
-function handleButton() {
-  //Do not put a conditional statement before an event listener, because??
-  if (input.value.length > 0) {
+function showListItem(){
     let li = document.createElement("li");
     li.appendChild(document.createTextNode(input.value));
     document.querySelector("ul").appendChild(li);
     input.value = "";
   }
-}
-document.querySelector("button").addEventListener("click", handleButton);
 
-//MAKE THE ENTER BUTTON ADD A LIST ITEM
+//MAKE THE BUTTON ADD THE VALUE OF THE INPUT FIELD TO THE TODO LIST
+function handleButton() {
+  //Do not put a conditional statement before an event listener, because??
+  document.querySelector("button").addEventListener("click", function(){
+    if (input.value.length > 0) {showListItem()}
+  } )}
+  
+//MAKE THE ENTER BUTTON ON THE KEYBOARD ADD A LIST ITEM
+input.addEventListener("keypress", function(event){
+  // to use the keycode function you must pass event as a parameter to the function
+  if (input.value.length > 0 && event.keyCode === 13)  {
+    showListItem()
+}})
+
+handleButton()
