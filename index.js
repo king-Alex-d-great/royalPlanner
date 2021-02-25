@@ -19,7 +19,6 @@ document.querySelector("ul").appendChild(li)
 }
 */
 
-
 //MAKE THE BUTTON ADD THE VALUE OF THE INPUT FIELD TO THE TODO LIST
 
 let input = document.querySelector("input");
@@ -31,11 +30,15 @@ li.appendChild(input.getAttribute("value")));
 
 */
 
-function handleButton () {
-document.querySelector("button").addEventListener("click", function (){
-let li = document.createElement("li");
-li.appendChild(document.createTextNode(input.value));
-document.querySelector("ul").appendChild(li)
-})
+function handleButton() {
+  //Do not put a conditional statement before an event listener, because??
+  if (input.value.length > 0) {
+    let li = document.createElement("li");
+    li.appendChild(document.createTextNode(input.value));
+    document.querySelector("ul").appendChild(li);
+    input.value = "";
+  }
 }
-handleButton();
+document.querySelector("button").addEventListener("click", handleButton);
+
+//MAKE THE ENTER BUTTON ADD A LIST ITEM
