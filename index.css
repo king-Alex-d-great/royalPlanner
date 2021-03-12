@@ -1,0 +1,77 @@
+body{
+  padding: 40px;
+    background-color: rgba(94, 223, 240, 0.44);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Geneva, Tahoma, sans-serif;
+}
+h1{
+    font-size: 3em;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    border: 4px solid white;
+    padding: 10px; 
+    border-radius: 8px ;
+}
+h3{
+    font-style: italic;
+    font-size: 2em;
+    color:#807878;
+    text-align: center;
+}
+
+.textBody{
+    border: 4px solid white;
+   padding: 20px;
+    width: 80%;
+    height: 50vh;
+    margin: 2% auto;
+    border-radius: 8px;
+}
+li{
+    text-transform: uppercase;
+    color:rgb(43, 35, 35);
+    font-family: cursive;
+    font-size: 14px;
+}
+input{
+    width: 80%;
+    padding: 10px;
+    height: 3vh;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+}
+::placeholder{
+    font-style: oblique;
+    color:rgb(134, 130, 130)
+}
+#enter{
+    background-color: rgba(13, 113, 196, 0.952);
+    box-shadow: 2px 2px 2px rgba(94, 223, 240, 0.44);
+    border-radius: 3px;
+    border: none;
+    padding: 6px;
+    width: 10%;
+    font-family: cursive;
+    color: white;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+button:hover{
+    transform: scale(1.1) ;
+}
+
+.listAsContainer{
+    display: flex;
+    flex: 1;
+}
+
+.listbuttons{
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 3px;
+     background-color: rgba(94, 223, 240, 0.44);
+   margin: 2px;
+}
